@@ -7,26 +7,33 @@ on:
 
 jobs: 
   build-and-push: 
-    runs-on: ubuntu-latest 
-    permissions: contents: read 
-    packages: write 
+    runs-on: ubuntu-latest    # Roda em uma VM Linux gratuita no GitHub
+    permissions: 
+      contents: read      # Permissão para ler o código do repositório
+      packages: write     # Permissão para publicar a imagem no GHCR
     
     steps: 
+      # Baixa o seu código para a VM do GitHub
       - name: Checkout do código 
-        uses: actions/checkout@v4 
-      
+        uses: actions/checkout@v4     
+
+      # Ativa o recurso de compilação avançada do Docker
       - name: Configurar Docker Buildx 
-        uses: docker/setup-buildx-action@v3 
+        uses: docker/setup-buildx-action@v3     
+
+      # Autentica no registro do GHCR usando o token do próprio GitHub
       - name: Login no GitHub Container Registry (GHCR) 
-        uses: docker/login-action@v3 
+        uses: docker/login-action@v3    
         with: 
           registry: ghcr.io 
           username: ${{ github.actor }} 
           password: ${{ secrets.GITHUB\_TOKEN }} 
       
+      # Compila o Dockerfile e envia para a nuvem
       - name: Build e Push da Imagem Docker 
         uses: docker/build-push-action@v5 
         with: 
-          context: . file: ./Dockerfile 
+          context: src
+          file: ./src/Dockerfile
           push: true 
           tags: ghcr.io/${{ github.repository\_owner }}/openmu-custom:latest
