@@ -7,6 +7,8 @@ services:
     restart: "no"
     ports:
       - "8081:8080"
+    volumes:
+    - ../../src/Persistence/EntityFramework/ConnectionSettings.xml:/app/ConnectionSettings.xml:ro
 
   database:
     ports:
