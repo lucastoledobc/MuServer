@@ -539,6 +539,12 @@ namespace MUnique.OpenMU.Persistence.Initialization.Properties {
         /// <summary>Gets the localized FixSummonerCurseSkillsPlugIn_Description text.</summary>
         public static string FixSummonerCurseSkillsPlugIn_Description => ResourceManager.GetString("FixSummonerCurseSkillsPlugIn_Description", resourceCulture)!;
 
+        /// <summary>Gets the localized FixTransformationRingRulesUpdatePlugIn_Name text.</summary>
+        public static string FixTransformationRingRulesUpdatePlugIn_Name => ResourceManager.GetString("FixTransformationRingRulesUpdatePlugIn_Name", resourceCulture);
+
+        /// <summary>Gets the localized FixTransformationRingRulesUpdatePlugIn_Description text.</summary>
+        public static string FixTransformationRingRulesUpdatePlugIn_Description => ResourceManager.GetString("FixTransformationRingRulesUpdatePlugIn_Description", resourceCulture);
+        
         /// <summary>Gets the localized AddAreaSkillSettingsUpdatePlugIn_Name text.</summary>
         public static string AddAreaSkillSettingsUpdatePlugIn_Name => ResourceManager.GetString("AddAreaSkillSettingsUpdatePlugIn_Name", resourceCulture)!;
 
@@ -844,6 +850,12 @@ namespace MUnique.OpenMU.Persistence.Initialization.Properties {
 
         /// <summary>Gets the localized AddFenrirMaterialDropGroupsUpdateSeason6_Description text.</summary>
         public static string AddFenrirMaterialDropGroupsUpdateSeason6_Description => ResourceManager.GetString("AddFenrirMaterialDropGroupsUpdateSeason6_Description", resourceCulture)!;
+
+        /// <summary>Gets the localized AddGensRewardItemsUpdatePlugIn_Name text.</summary>
+        public static string AddGensRewardItemsUpdatePlugIn_Name => ResourceManager.GetString("AddGensRewardItemsUpdatePlugIn_Name", resourceCulture)!;
+
+        /// <summary>Gets the localized AddGensRewardItemsUpdatePlugIn_Description text.</summary>
+        public static string AddGensRewardItemsUpdatePlugIn_Description => ResourceManager.GetString("AddGensRewardItemsUpdatePlugIn_Description", resourceCulture)!;
 
         /// <summary>Gets the localized FixVulcanusWarpIndexUpdatePlugIn_Name text.</summary>
         public static string FixVulcanusWarpIndexUpdatePlugIn_Name => ResourceManager.GetString("FixVulcanusWarpIndexUpdatePlugIn_Name", resourceCulture)!;
